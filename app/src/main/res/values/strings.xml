@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="question_1"><b>1. What is PHP stands for?</b></string>
+    <string name="question_2"><b>2. What does a Full-Stack Developer do?</b></string>
+    <string name="question_3"><b>3. In Javascript(Vanilla) how do you assign a tag to a variable? Write below. (Tag name is \"header\")</b></string>
+    <string name="question_4"><b>4. What is the output of this code?</b></string>
+    <string name="question_5"><b>5. Which one of these is different from the others?</b></string>
+    <string name="question_6"><b>6. What is XSS stands for?</b></string>
+    <string name="question_7"><b>7. What is HTTP Status OK response code?</b></string>
+    <string name="question_8"><b>8. Which of these are programming languages?</b></string>
+    <string name="question_9"><b>9. What is open-source?</b></string>
+    <string name="question_10"><b>10. What is HTML stands for?</b></string>
+    <string name="answer_placeholder"><i>Answer</i></string>
+    <string name="answer_1_1">Programmable Hyper Processing</string>
+    <string name="answer_1_2">PHP</string>
+    <string name="answer_1_3">Process Handler Pretext</string>
+    <string name="answer_1_4">Potter, Harry Potter</string>
+    <string name="answer_2_1">Front-end (HTML, CSS)</string>
+    <string name="answer_2_2">Back-End (PHP, Node.js)</string>
+    <string name="answer_2_3">Databases and Servers</string>
+    <string name="answer_2_4">None of the above</string>
+    <string name="answer_4_info">function subtract (val1) {\n\tvar a = val1;\n\tvar b = function(val2) {\n\t\treturn val2;\n\t}\n\treturn a-b; \n}\nsubtract(75)(25);</string>
+    <string name="answer_5_1">PHP</string>
+    <string name="answer_5_2">HTML</string>
+    <string name="answer_5_3">Node.js</string>
+    <string name="answer_6_1">Cross Side Scripting</string>
+    <string name="answer_6_2">Xtreme State Solution</string>
+    <string name="answer_6_3">Exception States</string>
+    <string name="answer_6_4">X Side Style</string>
+    <string name="answer_8_1">Python</string>
+    <string name="answer_8_2">Android</string>
+    <string name="answer_8_3">Linux</string>
+    <string name="answer_8_4">Java</string>
+    <string name="answer_9_1">A type of system that is vulnerable to any kind of cyber attack.</string>
+    <string name="answer_9_2">A software with a lot of bugs and available for everyone.</string>
+    <string name="answer_9_3">A software for which the original source code is made freely available and may be redistributed and modified.</string>
+    <string name="submit_button_text">Submit</string>
+</resources>
