@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitExam(View view){
-
     }
 
 }
