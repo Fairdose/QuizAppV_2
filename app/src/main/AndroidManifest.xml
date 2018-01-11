@@ -10,7 +10,7 @@
         <activity
             android:name=".UserInfo"
             android:screenOrientation="portrait"
-            android:label="Quiz App - Who are you?" >
+            android:label="Quiz App">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +19,13 @@
 
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize" >
+            android:name=".QuizActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".AnswerChecker"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

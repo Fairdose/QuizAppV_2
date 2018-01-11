@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">QuizApp</string>
+    <string name="app_name">Quiz App</string>
     <string name="remaining_time_text">Remaining time</string>
     <string name="question_1"><b>1. What is PHP stands for?</b></string>
     <string name="question_2"><b>2. What does a Full-Stack Developer do?</b></string>
-    <string name="question_3"><b>3. In Javascript(Vanilla) how do you assign a tag to a variable? Write below. (Tag name is \"header\")</b></string>
+    <string name="question_3"><b>3. In Javascript(Vanilla) how do you assign a tag to a variable? Write below with the proper syntax. (Tag name is \"header\")</b></string>
     <string name="question_4"><b>4. What is the output of this code?</b></string>
     <string name="question_5"><b>5. Which one of these is different from the others?</b></string>
     <string name="question_6"><b>6. What is XSS stands for?</b></string>
@@ -36,8 +36,9 @@
     <string name="answer_9_2">A software with a lot of bugs and available for everyone.</string>
     <string name="answer_9_3">A software for which the original source code is made freely available and may be redistributed and modified.</string>
     <string name="submit_button_text">Submit</string>
-    <string name="desc_1">This quiz test your general knowledge of being a full stack developer.</string>
-    <string name="desc_2">Built for Udacity\'s Google Android Scholarship Program and powered by Udacity community.</string>
+    <string name="desc_1">This quiz will test your full stack developer and some cyber security knowledge.</string>
+    <string name="desc_2">Built for Udacity© Google Android Scholarship Program and powered by Udacity© community.</string>
     <string name="start_button_text">Start Quiz</string>
     <string name="name_input">Your Name</string>
+    <string name="applicant_text">Applicant</string>
 </resources>
