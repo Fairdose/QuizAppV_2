@@ -13,7 +13,7 @@
     <string name="question_10"><b>10. What is HTML stands for?</b></string>
     <string name="answer_placeholder"><i>Answer</i></string>
     <string name="answer_1_1">Programmable Hyper Processing</string>
-    <string name="answer_1_2">PHP</string>
+    <string name="answer_1_2">PHP: Hypertext Preprocessor</string>
     <string name="answer_1_3">Process Handler Pretext</string>
     <string name="answer_1_4">Potter, Harry Potter</string>
     <string name="answer_2_1">Front-end (HTML, CSS)</string>
@@ -41,4 +41,13 @@
     <string name="start_button_text">Start Quiz</string>
     <string name="name_input">Your Name</string>
     <string name="applicant_text">Applicant</string>
+    <string name="user_info_toast">Name field cannot be empty</string>
+    <string name="check_answer_prompt">Press back to check the answers</string>
+    <string name="addressing">Dear</string>
+    <string name="time_up_prompt">Time is up!</string>
+    <string name="scored_text">You have scored</string>
+    <string name="max_score">/10</string>
+    <string name="html_correct_answer">HYPER TEXT MARKUP LANGUAGE</string>
+    <string name="time_placeholder">10:00</string>
+    <string name="retry_text">Try Again</string>
 </resources>

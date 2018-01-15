@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/QuizAppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/QuizAppTheme"
     android:orientation="vertical">
 
     <TextView
+        style="@style/time_up_view"
+        android:id="@+id/time_up_prompt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Placeholder"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/time_up_prompt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/result_view_1"
+            android:id="@+id/applicant_addressing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addressing" />
+
+        <TextView
+            style="@style/result_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scored_text" />
+
+        <TextView
+            style="@style/result_view_3"
+            android:id="@+id/total_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="You have scored"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/check_answer_prompt" />
 
 </LinearLayout>

@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class UserInfo extends AppCompatActivity{
 
+    public static String userName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +26,13 @@ public class UserInfo extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                EditText userName = (EditText) findViewById(R.id.userNameVal);
-                String value = userName.getText().toString();
+                EditText userVal = (EditText) findViewById(R.id.userNameVal);
+                userName = userVal.getText().toString();
 
-                if (TextUtils.isEmpty(value)) {
+                if (TextUtils.isEmpty(userName)) {
 
                     Context context = getApplicationContext();
-                    CharSequence text = "Name field cannot be empty";
+                    CharSequence text = getString(R.string.user_info_toast);
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(context, text, duration);
@@ -39,7 +41,6 @@ public class UserInfo extends AppCompatActivity{
                 } else {
 
                     Intent quizIntent = new Intent(UserInfo.this, QuizActivity.class);
-                    quizIntent.putExtra("user_name", value);
 
                     startActivity(quizIntent);
                 }
