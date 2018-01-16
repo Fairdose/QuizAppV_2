@@ -50,4 +50,6 @@
     <string name="html_correct_answer">HYPER TEXT MARKUP LANGUAGE</string>
     <string name="time_placeholder">10:00</string>
     <string name="retry_text">Try Again</string>
+    <string name="correct_answer_1">It stands for PHP: HyperText PreProcessor</string>
+    <string name="correct_answer_3">document.getElementsByTagName(\"header\");</string>
 </resources>

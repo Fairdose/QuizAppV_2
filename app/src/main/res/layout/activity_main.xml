@@ -125,6 +125,12 @@
 
                 </RadioGroup>
 
+                <TextView
+                    android:id="@+id/correct_answer_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correct_answer_1"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -168,6 +174,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_2_4" />
 
+                <TextView
+                    android:id="@+id/correct_answer_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full Stack Developers are familiar with all layers in computer software development"/>
+
 
             </LinearLayout>
 
@@ -192,6 +204,12 @@
                     android:hint="@string/answer_placeholder"
                     android:inputType="text"
                     android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/correct_answer_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correct_answer_3"/>
 
             </LinearLayout>
 
@@ -222,6 +240,12 @@
                     android:hint="@string/answer_placeholder"
                     android:inputType="text"
                     android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/correct_answer_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="placeholder"/>
 
             </LinearLayout>
 
@@ -264,6 +288,12 @@
                         android:text="@string/answer_5_3" />
 
                 </RadioGroup>
+
+                <TextView
+                    android:id="@+id/correct_answer_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="placeholder"/>
 
             </LinearLayout>
 
@@ -314,6 +344,12 @@
 
                 </RadioGroup>
 
+                <TextView
+                    android:id="@+id/correct_answer_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="placeholder"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -337,6 +373,12 @@
                     android:hint="@string/answer_placeholder"
                     android:inputType="text"
                     android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/correct_answer_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="placeholder"/>
 
             </LinearLayout>
 
@@ -381,6 +423,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_8_4" />
 
+                <TextView
+                    android:id="@+id/correct_answer_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="placeholder"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -423,6 +471,12 @@
 
                 </RadioGroup>
 
+                <TextView
+                    android:id="@+id/correct_answer_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="placeholder"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -446,6 +500,12 @@
                     android:hint="@string/answer_placeholder"
                     android:inputType="text"
                     android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/correct_answer_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="placeholder"/>
 
             </LinearLayout>
 

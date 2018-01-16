@@ -5,6 +5,7 @@ import android.content.Intent;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,10 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class QuizActivity extends AppCompatActivity {
+
+    public static boolean timeStatus = true;
+
+    public static ArrayList<Question> questions = new ArrayList<Question>();
 
     private final String FORMAT = "%02d:%02d";
 
@@ -50,63 +55,10 @@ public class QuizActivity extends AppCompatActivity {
     RadioButton answer_9_3;
     EditText answer_10_1;
 
-    // --End--
-
-    //Declare if times up or not
-
-    public static boolean timeStatus = true;
-
-    //Declare all the answers as variables --Start--
-
-//    public static boolean
-//            answered_1_1,
-//            answered_1_2,
-//            answered_1_3,
-//            answered_1_4,
-//            answered_2_1,
-//            answered_2_2,
-//            answered_2_3,
-//            answered_2_4,
-//            answered_5_1,
-//            answered_5_2,
-//            answered_5_3,
-//            answered_6_1,
-//            answered_6_2,
-//            answered_6_3,
-//            answered_6_4,
-//            answered_8_1,
-//            answered_8_2,
-//            answered_8_3,
-//            answered_8_4,
-//            answered_9_1,
-//            answered_9_2,
-//            answered_9_3;
-//
-//    public static String
-//            answered_3_1,
-//            answered_4_1,
-//            answered_7_1,
-//            answered_10_1;
-
-    public static ArrayList <Question> questions = new ArrayList<Question>();
-
-    Question question_1;
-    Question question_2;
-    Question question_3;
-    Question question_4;
-    Question question_5;
-    Question question_6;
-    Question question_7;
-    Question question_8;
-    Question question_9;
-    Question question_10;
-
-    // --End--
-
-    String[][] answerInputs = new String[10][4];
-
     @Override
-    public void onBackPressed() { }
+    public void onBackPressed() {
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -153,8 +105,6 @@ public class QuizActivity extends AppCompatActivity {
         answer_9_3 = findViewById(R.id.answer_9_3);
         answer_10_1 = (EditText) findViewById(R.id.answer_10_1);
 
-        // --End--
-
         final CountDownTimer timer = new CountDownTimer(601000, 1000) {
 
             public void onTick(long timeRemaining) {
@@ -199,38 +149,33 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
-    public void submitExamValues () {
+    public void submitExamValues() {
 
-        //Start the new calculating activity
-
-        Intent quizIntent = new Intent(this, AnswerChecker.class);
-
-        startActivity(quizIntent);
-
-        //At the background, get all the answers and pass values to their respected variables
+        //Get all the answers and pass values to their respected variables
         //and set them disabled so the user could compare the answers --Start--
 
         ArrayList<Boolean> question_1_arr = new ArrayList<Boolean>();
         ArrayList<Boolean> question_2_arr = new ArrayList<Boolean>();
-        ArrayList<String> question_3_arr = new ArrayList<String>();
-        ArrayList<String> question_4_arr = new ArrayList<String>();
+        String question_3_arr = answer_3_1.getText().toString();
+        String question_4_arr = answer_4_1.getText().toString();
         ArrayList<Boolean> question_5_arr = new ArrayList<Boolean>();
         ArrayList<Boolean> question_6_arr = new ArrayList<Boolean>();
-        ArrayList<String> question_7_arr = new ArrayList<String>();
+        String question_7_arr_pseudo = answer_7_1.getText().toString();
+        String question_7_arr = question_7_arr_pseudo.replaceAll("'","\"");
         ArrayList<Boolean> question_8_arr = new ArrayList<Boolean>();
         ArrayList<Boolean> question_9_arr = new ArrayList<Boolean>();
-        ArrayList<String> question_10_arr = new ArrayList<String>();
+        String question_10_arr = answer_10_1.getText().toString().toUpperCase();
 
-        ArrayList<Boolean> answers_1_arr = new ArrayList<Boolean>(Arrays.asList(false,true,false,false));
-        ArrayList<Boolean> answers_2_arr = new ArrayList<Boolean>(Arrays.asList(true,true,true,false));
-        ArrayList<String> answers_3_arr = new ArrayList<String>(Arrays.asList("document.getElementsByTagName(\"header\")","document.getElementsByTagName(\"header\");"));
-        ArrayList<String> answers_4_arr = new ArrayList<String>(Arrays.asList("50"));
-        ArrayList<Boolean> answers_5_arr = new ArrayList<Boolean>(Arrays.asList(false,true,false));
-        ArrayList<Boolean> answers_6_arr = new ArrayList<Boolean>(Arrays.asList(true,false,false,false));
-        ArrayList<String> answers_7_arr = new ArrayList<String>(Arrays.asList("200"));
-        ArrayList<Boolean> answers_8_arr = new ArrayList<Boolean>(Arrays.asList(true,false,false,false));
-        ArrayList<Boolean> answers_9_arr = new ArrayList<Boolean>(Arrays.asList(true,false,false,true));
-        ArrayList<String> answers_10_arr = new ArrayList<String>(Arrays.asList("HYPER TEXT MARKUP LANGUAGE"));
+        ArrayList<Boolean> answers_1_arr = new ArrayList<Boolean>(Arrays.asList(false, true, false, false));
+        ArrayList<Boolean> answers_2_arr = new ArrayList<Boolean>(Arrays.asList(true, true, true, false));
+        String answers_3_arr = "document.getElementsByTagName(\"header\");";
+        String answers_4_arr = "50";
+        ArrayList<Boolean> answers_5_arr = new ArrayList<Boolean>(Arrays.asList(false, true, false));
+        ArrayList<Boolean> answers_6_arr = new ArrayList<Boolean>(Arrays.asList(true, false, false, false));
+        String answers_7_arr = "200";
+        ArrayList<Boolean> answers_8_arr = new ArrayList<Boolean>(Arrays.asList(true, false, false, true));
+        ArrayList<Boolean> answers_9_arr = new ArrayList<Boolean>(Arrays.asList(false, false, true));
+        String answers_10_arr = "HYPER TEXT MARKUP LANGUAGE";
 
         question_1_arr.add(answer_1_1.isChecked());
         question_1_arr.add(answer_1_2.isChecked());
@@ -242,10 +187,6 @@ public class QuizActivity extends AppCompatActivity {
         question_2_arr.add(answer_2_3.isChecked());
         question_2_arr.add(answer_2_4.isChecked());
 
-        question_3_arr.add(answer_3_1.getText().toString());
-
-        question_4_arr.add(answer_4_1.getText().toString());
-
         question_5_arr.add(answer_5_1.isChecked());
         question_5_arr.add(answer_5_2.isChecked());
         question_5_arr.add(answer_5_3.isChecked());
@@ -255,29 +196,25 @@ public class QuizActivity extends AppCompatActivity {
         question_6_arr.add(answer_6_3.isChecked());
         question_6_arr.add(answer_6_4.isChecked());
 
-        question_7_arr.add(answer_7_1.getText().toString());
+        question_8_arr.add(answer_8_1.isChecked());
+        question_8_arr.add(answer_8_2.isChecked());
+        question_8_arr.add(answer_8_3.isChecked());
+        question_8_arr.add(answer_8_4.isChecked());
 
-        question_2_arr.add(answer_8_1.isChecked());
-        question_2_arr.add(answer_8_2.isChecked());
-        question_2_arr.add(answer_8_3.isChecked());
-        question_2_arr.add(answer_8_4.isChecked());
+        question_9_arr.add(answer_9_1.isChecked());
+        question_9_arr.add(answer_9_2.isChecked());
+        question_9_arr.add(answer_9_3.isChecked());
 
-        question_2_arr.add(answer_9_1.isChecked());
-        question_2_arr.add(answer_9_2.isChecked());
-        question_2_arr.add(answer_9_3.isChecked());
-
-        question_10_arr.add(answer_10_1.getText().toString().toUpperCase());
-
-        question_1 = new Question(1, "radio", null, question_1_arr, null, answers_1_arr);
-        question_2 = new Question(2, "check", null, question_2_arr, null, answers_2_arr);
-        question_3 = new Question(3, "text", question_3_arr, null, answers_3_arr, null);
-        question_4 = new Question(4, "text", question_4_arr, null, answers_4_arr, null);
-        question_5 = new Question(5, "radio", null, question_5_arr, null, answers_5_arr);
-        question_6 = new Question(6, "radio", null, question_6_arr, null, answers_6_arr);
-        question_7 = new Question(7, "text", question_7_arr, null, answers_7_arr, null);
-        question_8 = new Question(8, "check", null, question_8_arr, null, answers_8_arr);
-        question_9 = new Question(9, "radio", null, question_9_arr, null, answers_9_arr);
-        question_10 = new Question(10, "text", question_10_arr, null, answers_10_arr, null);
+        questions.add(0, new Question(1, "radio", null, question_1_arr, null, answers_1_arr));
+        questions.add(1, new Question(2, "check", null, question_2_arr, null, answers_2_arr));
+        questions.add(2, new Question(3, "text", question_3_arr, null, answers_3_arr, null));
+        questions.add(3, new Question(4, "text", question_4_arr, null, answers_4_arr, null));
+        questions.add(4, new Question(5, "radio", null, question_5_arr, null, answers_5_arr));
+        questions.add(5, new Question(6, "radio", null, question_6_arr, null, answers_6_arr));
+        questions.add(6, new Question(7, "text", question_7_arr, null, answers_7_arr, null));
+        questions.add(7, new Question(8, "check", null, question_8_arr, null, answers_8_arr));
+        questions.add(8, new Question(9, "radio", null, question_9_arr, null, answers_9_arr));
+        questions.add(9, new Question(10, "text", question_10_arr, null, answers_10_arr, null));
 
         answer_1_1.setEnabled(false);
         answer_1_2.setEnabled(false);
@@ -306,8 +243,23 @@ public class QuizActivity extends AppCompatActivity {
         answer_9_3.setEnabled(false);
         answer_10_1.setEnabled(false);
 
-        // --End--
+        //Start the new calculating activity
+
+        Intent quizIntent = new Intent(this, AnswerChecker.class);
+
+        startActivity(quizIntent);
 
     }
 
 }
+//0
+//1
+//2
+//3
+//4
+//5
+//6
+//7
+//8
+//9
+//10

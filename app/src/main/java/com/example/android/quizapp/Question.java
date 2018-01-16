@@ -4,21 +4,22 @@ import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
 
+
 public class Question {
 
     private int pQuestionNumber;
 
     private String pQuestionType;
 
-    private ArrayList<String> pQuestionAnswer;
+    private String pQuestionAnswer;
 
     private ArrayList<Boolean> pQuestionOptions;
 
-    private ArrayList<String> pCorrectAnswers;
+    private String pCorrectAnswers;
 
     private ArrayList<Boolean> pCorrectOptions;
 
-    public Question(int questionNumber, String questionType, @Nullable ArrayList<String> questionAnswers, @Nullable ArrayList<Boolean> questionOptions, @Nullable  ArrayList<String> correctAnswers, @Nullable  ArrayList<Boolean> correctOptions) {
+    public Question(int questionNumber, String questionType, @Nullable String questionAnswers, @Nullable ArrayList<Boolean> questionOptions, @Nullable String correctAnswers, @Nullable ArrayList<Boolean> correctOptions) {
         pQuestionNumber = questionNumber;
         pQuestionType = questionType;
         pQuestionAnswer = questionAnswers;
@@ -27,38 +28,28 @@ public class Question {
         pCorrectOptions = correctOptions;
     }
 
-    private int checkQuestion() { return pQuestionNumber; }
+    public int checkQuestion() {
+        return pQuestionNumber;
+    }
 
-    private String getQuestionType() { return  pQuestionType; }
+    public String getQuestionType() {
+        return pQuestionType;
+    }
 
-    private ArrayList<String> checkAnswerText() { return pQuestionAnswer; }
+    public String checkAnswerText() {
+        return pQuestionAnswer;
+    }
 
-    private ArrayList<Boolean> checkAnswerOptions(){ return pQuestionOptions; }
+    public ArrayList<Boolean> checkAnswerOptions() {
+        return pQuestionOptions;
+    }
 
-    public static boolean checkAnswers (Question question) {
-        switch (question.getQuestionType()) {
+    public String getAnswerText() {
+        return pCorrectAnswers;
+    }
 
-            case "radio":
-            case "check":
-                if(question.checkAnswerOptions().equals(question.pCorrectOptions)) {
-                    return true;
-                }
-
-            break;
-
-            case "text":
-                for (int defVal = 1; defVal <= question.checkAnswerText().size(); defVal++){
-                    if(question.pCorrectAnswers.contains(question.checkAnswerText().get(defVal))) {
-                        return true;
-                    }
-                }
-
-            break;
-
-            default: return false;
-        }
-
-        return true;
+    public ArrayList<Boolean> getAnswerOptions() {
+        return pCorrectOptions;
     }
 
 }
