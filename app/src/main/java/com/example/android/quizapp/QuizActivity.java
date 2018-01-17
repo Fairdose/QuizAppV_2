@@ -1,6 +1,5 @@
 package com.example.android.quizapp;
 
-import android.content.Context;
 import android.content.Intent;
 
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class QuizActivity extends AppCompatActivity {
     public static ArrayList<TextView> answerCompare;
 
     private final String FORMAT = "%02d:%02d";
-    
+
     private ArrayList<TextView> choices;
 
     private boolean retryValue = false;

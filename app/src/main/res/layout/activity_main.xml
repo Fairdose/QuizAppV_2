@@ -120,6 +120,7 @@
                     <RadioButton
                         android:id="@+id/answer_1_4"
                         style="@style/answer_theme"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/answer_1_4" />
 

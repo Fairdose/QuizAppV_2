@@ -14,15 +14,39 @@ public class AnswerChecker extends AppCompatActivity {
 
     private boolean isTimeUp = QuizActivity.timeStatus;
 
-    private String calculateExamV2() {
+    private int scoreSum = 0;
 
-        int totalScore = 0;
+    TextView timeUpView;
+    TextView applicantName;
+    TextView totalScore;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_result);
+
+        timeUpView = (TextView) findViewById(R.id.time_up_prompt);
+        applicantName = (TextView) findViewById(R.id.applicant_addressing);
+        totalScore = (TextView) findViewById(R.id.total_score);
+
+        if (isTimeUp) {
+            timeUpView.setVisibility(View.INVISIBLE);
+        }
+
+        String applicant = getString(R.string.addressing) + " " + UserInfo.userName;
+        applicantName.setText(applicant);
+
+        setTextAndColor();
+
+    }
+
+    private String calculateExamV2() {
 
         checkedAnswers.clear();
 
         for (int i = 0; i < QuizActivity.questions.size(); i++) {
             if (checkAnswers(QuizActivity.questions.get(i))) {
-                totalScore += 1;
+                scoreSum += 1;
                 checkedAnswers.add(i, true);
             } else {
                 checkedAnswers.add(i, false);
@@ -32,7 +56,7 @@ public class AnswerChecker extends AppCompatActivity {
 
         QuizActivity.questions.clear();
 
-        return String.valueOf(totalScore) + getString(R.string.max_score);
+        return String.valueOf(scoreSum) + getString(R.string.max_score);
 
     }
 
@@ -56,24 +80,19 @@ public class AnswerChecker extends AppCompatActivity {
         return point;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
-
-        TextView timeUpView = (TextView) findViewById(R.id.time_up_prompt);
-        TextView applicantName = (TextView) findViewById(R.id.applicant_addressing);
-        TextView totalScore = (TextView) findViewById(R.id.total_score);
-
-        if (isTimeUp) {
-            timeUpView.setVisibility(View.INVISIBLE);
-        }
-
-        String applicant = getString(R.string.addressing) + " " + UserInfo.userName;
-        applicantName.setText(applicant);
+    private void setTextAndColor() {
 
         totalScore.setText(calculateExamV2());
 
+        if (scoreSum <= 2) {
+            totalScore.setTextColor(getResources().getColor(R.color.low_score_color));
+        } else if (scoreSum >= 3 && scoreSum <= 9) {
+            totalScore.setTextColor(getResources().getColor(R.color.def_text_color));
+        } else if (scoreSum == 10) {
+            totalScore.setTextColor(getResources().getColor(R.color.top_score_color));
+        }
+
+        scoreSum = 0;
     }
 
 }
