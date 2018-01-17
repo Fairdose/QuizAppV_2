@@ -52,4 +52,11 @@
     <string name="retry_text">Try Again</string>
     <string name="correct_answer_1">It stands for PHP: HyperText PreProcessor</string>
     <string name="correct_answer_3">document.getElementsByTagName(\"header\");</string>
+    <string name="correct_answer_2">Full Stack Developers are familiar with all layers in computer software development</string>
+    <string name="correct_answer_5">PHP and Node.js are both server sided scripts whereas HTML is a markup language.</string>
+    <string name="correct_answer_6">XSS stands for Cross Side Scripting.</string>
+    <string name="correct_answer_7">HTTP ok response is \'200\'.</string>
+    <string name="correct_answer_8">Python and Java are programming languages. Linux and Android are operating systems.</string>
+    <string name="correct_answer_10">Hyper Text Markup Language</string>
+    <string name="correct_answer_4">The output of this code is 50</string>
 </resources>

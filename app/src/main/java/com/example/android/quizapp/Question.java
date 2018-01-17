@@ -15,11 +15,11 @@ public class Question {
 
     private ArrayList<Boolean> pQuestionOptions;
 
-    private String pCorrectAnswers;
+    private ArrayList<String> pCorrectAnswers;
 
     private ArrayList<Boolean> pCorrectOptions;
 
-    public Question(int questionNumber, String questionType, @Nullable String questionAnswers, @Nullable ArrayList<Boolean> questionOptions, @Nullable String correctAnswers, @Nullable ArrayList<Boolean> correctOptions) {
+    public Question(int questionNumber, String questionType, @Nullable String questionAnswers, @Nullable ArrayList<Boolean> questionOptions, @Nullable ArrayList<String> correctAnswers, @Nullable ArrayList<Boolean> correctOptions) {
         pQuestionNumber = questionNumber;
         pQuestionType = questionType;
         pQuestionAnswer = questionAnswers;
@@ -44,7 +44,7 @@ public class Question {
         return pQuestionOptions;
     }
 
-    public String getAnswerText() {
+    public ArrayList<String> getAnswerTexts() {
         return pCorrectAnswers;
     }
 

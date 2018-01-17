@@ -6,8 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class AnswerChecker extends AppCompatActivity {
@@ -20,18 +18,18 @@ public class AnswerChecker extends AppCompatActivity {
 
         int totalScore = 0;
 
-        for (int i = 0 ; i < QuizActivity.questions.size(); i++) {
+        checkedAnswers.clear();
+
+        for (int i = 0; i < QuizActivity.questions.size(); i++) {
             if (checkAnswers(QuizActivity.questions.get(i))) {
                 totalScore += 1;
                 checkedAnswers.add(i, true);
-                Log.v("Size of list ", String.valueOf(checkedAnswers.size()));
             } else {
                 checkedAnswers.add(i, false);
-                Log.v("Size of list ", String.valueOf(checkedAnswers.size()));
             }
+            Log.v("Size of list ", String.valueOf(checkedAnswers.size()));
         }
 
-        checkedAnswers.clear();
         QuizActivity.questions.clear();
 
         return String.valueOf(totalScore) + getString(R.string.max_score);
@@ -50,7 +48,7 @@ public class AnswerChecker extends AppCompatActivity {
         }
 
         if (question.getQuestionType().equals("text")) {
-            if (question.getAnswerText().equals(question.checkAnswerText())) {
+            if (question.getAnswerTexts().contains(question.checkAnswerText())) {
                 point = true;
             }
         }

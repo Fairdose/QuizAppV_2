@@ -126,6 +126,7 @@
                 </RadioGroup>
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -175,10 +176,11 @@
                     android:text="@string/answer_2_4" />
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Full Stack Developers are familiar with all layers in computer software development"/>
+                    android:text="@string/correct_answer_2"/>
 
 
             </LinearLayout>
@@ -206,6 +208,7 @@
                     android:maxLines="1" />
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -242,10 +245,11 @@
                     android:maxLines="1" />
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="placeholder"/>
+                    android:text="@string/correct_answer_4"/>
 
             </LinearLayout>
 
@@ -290,10 +294,11 @@
                 </RadioGroup>
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="placeholder"/>
+                    android:text="@string/correct_answer_5"/>
 
             </LinearLayout>
 
@@ -345,10 +350,11 @@
                 </RadioGroup>
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="placeholder"/>
+                    android:text="@string/correct_answer_6"/>
 
             </LinearLayout>
 
@@ -375,10 +381,11 @@
                     android:maxLines="1" />
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="placeholder"/>
+                    android:text="@string/correct_answer_7"/>
 
             </LinearLayout>
 
@@ -424,10 +431,11 @@
                     android:text="@string/answer_8_4" />
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="placeholder"/>
+                    android:text="@string/correct_answer_8"/>
 
             </LinearLayout>
 
@@ -472,10 +480,11 @@
                 </RadioGroup>
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="placeholder"/>
+                    android:text="@string/answer_9_3"/>
 
             </LinearLayout>
 
@@ -502,10 +511,11 @@
                     android:maxLines="1" />
 
                 <TextView
+                    style="@style/correct_answer_theme"
                     android:id="@+id/correct_answer_10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="placeholder"/>
+                    android:text="@string/correct_answer_10"/>
 
             </LinearLayout>
 
