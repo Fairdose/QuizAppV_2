@@ -151,6 +151,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onFinish() {
                 submit.setVisibility(View.GONE);
                 retry.setVisibility(View.VISIBLE);
+                retryValue = true;
                 timeStatus = true;
                 submitExamValues();
             }
