@@ -1,9 +1,13 @@
 package com.example.android.quizapp;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,6 +17,8 @@ public class AnswerChecker extends AppCompatActivity {
     public static ArrayList<Boolean> checkedAnswers = new ArrayList<Boolean>();
 
     private boolean isTimeUp = QuizActivity.timeStatus;
+
+    public MediaPlayer timeUpBell;
 
     private int scoreSum = 0;
 
@@ -28,8 +34,13 @@ public class AnswerChecker extends AppCompatActivity {
         timeUpView = (TextView) findViewById(R.id.time_up_prompt);
         applicantName = (TextView) findViewById(R.id.applicant_addressing);
         totalScore = (TextView) findViewById(R.id.total_score);
+        timeUpBell = MediaPlayer.create(this, R.raw.bell);
 
         if (isTimeUp) {
+            timeUpView.setVisibility(View.VISIBLE);
+            tiltTimeUp();
+            timeUpBell.start();
+        } else {
             timeUpView.setVisibility(View.INVISIBLE);
         }
 
@@ -93,6 +104,11 @@ public class AnswerChecker extends AppCompatActivity {
         }
 
         scoreSum = 0;
+    }
+
+    private void tiltTimeUp (){
+        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tilt);
+        timeUpView.startAnimation(animation1);
     }
 
 }

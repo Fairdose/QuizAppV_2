@@ -20,7 +20,7 @@ import org.w3c.dom.Text;
 
 public class QuizActivity extends AppCompatActivity {
 
-    public static boolean timeStatus = true;
+    public static boolean timeStatus = false;
 
     public static ArrayList<Question> questions = new ArrayList<Question>();
 
@@ -151,7 +151,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onFinish() {
                 submit.setVisibility(View.GONE);
                 retry.setVisibility(View.VISIBLE);
-                timeStatus = false;
+                timeStatus = true;
                 submitExamValues();
             }
 
@@ -180,6 +180,8 @@ public class QuizActivity extends AppCompatActivity {
 
                 for (int i = 0; i < answerCompare.size(); i++)
                     answerCompare.get(i).setVisibility(View.GONE);
+
+                timeStatus = false;
 
                 Intent retry = new Intent(QuizActivity.this, QuizActivity.class);
                 startActivity(retry);
