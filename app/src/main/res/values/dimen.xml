@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_text_size">22sp</dimen>
+    <dimen name="text_size_def">16sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_42">42sp</dimen>
+    <dimen name="text_size_64">64sp</dimen>
+    <dimen name="add_5dp">5dp</dimen>
+    <dimen name="add_8dp">8dp</dimen>
+    <dimen name="add_10dp">10dp</dimen>
+    <dimen name="add_18dp">18dp</dimen>
+    <dimen name="add_30dp">30dp</dimen>
+    <dimen name="add_50dp">50dp</dimen>
+    <dimen name="add_64dp">64dp</dimen>
+</resources>

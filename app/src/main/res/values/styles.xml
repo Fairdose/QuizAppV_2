@@ -1,9 +1,9 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">#263238</item>
-        <item name="colorPrimaryDark">#263238</item>
-        <item name="android:textSize">22sp</item>
+        <item name="colorPrimary">@color/action_bar_color</item>
+        <item name="colorPrimaryDark">@color/action_bar_color</item>
+        <item name="android:textSize">@dimen/header_text_size</item>
     </style>
 
     <style name="QuizAppTheme" parent="Theme.AppCompat">
@@ -11,18 +11,18 @@
     </style>
 
     <style name="time_header">
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">@dimen/add_5dp</item>
+        <item name="android:paddingTop">@dimen/add_5dp</item>
         <item name="android:background">@color/action_bar_background</item>
     </style>
 
     <style name="question_theme">
         <item name="android:background">@drawable/radius_border</item>
-        <item name="android:padding">8dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
-        <item name="android:layout_marginBottom">5dp</item>
-        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">@dimen/add_8dp</item>
+        <item name="android:layout_marginLeft">@dimen/add_8dp</item>
+        <item name="android:layout_marginRight">@dimen/add_8dp</item>
+        <item name="android:layout_marginBottom">@dimen/add_5dp</item>
+        <item name="android:layout_marginTop">@dimen/add_5dp</item>
     </style>
 
     <style name="question_text">
@@ -31,20 +31,20 @@
     </style>
 
     <style name="answer_theme">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text_size_def</item>
         <item name="android:textColor">@color/def_text_color</item>
     </style>
 
     <style name="correct_answer_theme">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text_size_def</item>
         <item name="android:textColor">@color/def_text_color</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:paddingTop">6dp</item>
-        <item name="android:paddingBottom">6dp</item>
+        <item name="android:layout_marginTop">@dimen/add_5dp</item>
+        <item name="android:paddingTop">@dimen/add_5dp</item>
+        <item name="android:paddingBottom">@dimen/add_5dp</item>
     </style>
 
     <style name="placeholder_theme">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text_size_def</item>
         <item name="android:textStyle">italic</item>
     </style>
 
@@ -52,74 +52,74 @@
         <item name="android:background">#37474F</item>
         <item name="android:textColor">#ECEFF1</item>
         <item name="android:layout_width">240dp</item>
-        <item name="android:layout_marginTop">18dp</item>
-        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:layout_marginTop">@dimen/add_18dp</item>
+        <item name="android:layout_marginBottom">@dimen/add_18dp</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:capitalize">none</item>
     </style>
 
     <style name="time_up_view">
-        <item name="android:textColor">#1a32b9</item>
+        <item name="android:textColor">@color/time_up_color</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">42sp</item>
+        <item name="android:textSize">@dimen/text_size_42</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="result_view_1">
         <item name="android:gravity">center_horizontal|center_vertical</item>
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:textSize">38sp</item>
-        <item name="android:layout_marginBottom">64dp</item>
+        <item name="android:paddingBottom">@dimen/add_10dp</item>
+        <item name="android:paddingTop">@dimen/add_10dp</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:layout_marginBottom">@dimen/add_64dp</item>
         <item name="android:textColor">@color/def_text_color</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="result_view_2">
         <item name="android:gravity">center</item>
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">@dimen/add_10dp</item>
+        <item name="android:paddingTop">@dimen/add_10dp</item>
         <item name="android:textColor">@color/def_text_color</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="result_view_3">
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:textSize">64sp</item>
+        <item name="android:paddingBottom">@dimen/add_10dp</item>
+        <item name="android:paddingTop">@dimen/add_10dp</item>
+        <item name="android:textSize">@dimen/text_size_64</item>
         <item name="android:textColor">@color/def_text_color</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="input_view_1">
-        <item name="android:paddingTop">40dp</item>
+        <item name="android:paddingTop">@dimen/add_30dp</item>
         <item name="android:gravity">center_vertical|center_horizontal</item>
         <item name="android:textAppearance">?android:textAppearanceLarge</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:padding">@dimen/add_18dp</item>
     </style>
 
     <style name="input_view_2">
         <item name="android:gravity">center_horizontal</item>
         <item name="android:hint">@string/name_input</item>
         <item name="android:inputType">textCapWords</item>
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginTop">@dimen/add_18dp</item>
         <item name="android:maxLines">1</item>
         <item name="android:maxLength">16</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
     </style>
 
     <style name="input_view_3">
-        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:layout_marginTop">@dimen/add_50dp</item>
         <item name="android:background">@drawable/radius_border_20dp</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="input_view_4">
-        <item name="android:paddingLeft">30dp</item>
-        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingLeft">@dimen/add_30dp</item>
+        <item name="android:paddingRight">@dimen/add_30dp</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text_size_def</item>
     </style>
 
 </resources>
