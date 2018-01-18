@@ -6,7 +6,7 @@
     <string name="question_3"><b>3. In Javascript(Vanilla) how do you assign a tag to a variable? Write below with the proper syntax. (Tag name is \"header\")</b></string>
     <string name="question_4"><b>4. What is the output of this code?</b></string>
     <string name="question_5"><b>5. Which one of these is different from the others?</b></string>
-    <string name="question_6"><b>6. What is XSS stands for?</b></string>
+    <string name="question_6"><b>6. What does XSS stands for?</b></string>
     <string name="question_7"><b>7. What is HTTP Status OK response code?</b></string>
     <string name="question_8"><b>8. Which of these are programming languages?</b></string>
     <string name="question_9"><b>9. What is open-source?</b></string>
