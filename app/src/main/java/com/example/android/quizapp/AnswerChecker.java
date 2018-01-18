@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class AnswerChecker extends AppCompatActivity {
 
     public static ArrayList<Boolean> checkedAnswers = new ArrayList<Boolean>();
-    
+
     public MediaPlayer timeUpBell;
 
     private boolean isTimeUp = QuizActivity.timeStatus;
