@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
+import android.content.res.Resources;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -72,6 +74,9 @@ public class QuizActivity extends AppCompatActivity {
     TextView correct_answer_9;
     TextView correct_answer_10;
 
+    TextView text1;
+    ScrollView mainEvent;
+
     @Override
     public void onBackPressed() {
     }
@@ -83,7 +88,9 @@ public class QuizActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        final TextView text1 = (TextView) findViewById(R.id.remaining_time);
+        mainEvent = (ScrollView) findViewById(R.id.scroll_view);
+
+        text1 = (TextView) findViewById(R.id.remaining_time);
 
         final TextView submit = (TextView) findViewById(R.id.submit_exam);
 
@@ -248,8 +255,12 @@ public class QuizActivity extends AppCompatActivity {
 
         //Start the calculations.
 
+        if (timeStatus)
+            text1.setText(R.string.time_up_prompt);
+
         AnswerChecker.calculateExamV2();
         showTheAnswers();
+        mainEvent.fullScroll(ScrollView.FOCUS_UP);
         Toast.makeText(getApplicationContext(), "Dear " + UserInfo.userName + ". You have scored " + AnswerChecker.calculateExamV2() , Toast.LENGTH_LONG).show();
 
     }

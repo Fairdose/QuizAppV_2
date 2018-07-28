@@ -28,9 +28,7 @@ public class Question {
         pCorrectOptions = correctOptions;
     }
 
-    public int checkQuestion() {
-        return pQuestionNumber;
-    }
+    public int checkQuestion() { return pQuestionNumber; }
 
     public String getQuestionType() {
         return pQuestionType;
