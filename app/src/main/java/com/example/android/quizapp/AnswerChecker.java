@@ -1,5 +1,6 @@
 package com.example.android.quizapp;
 
+import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -20,13 +22,17 @@ public class AnswerChecker extends AppCompatActivity {
 
     private boolean isTimeUp = QuizActivity.timeStatus;
 
-    private int scoreSum = 0;
+    public static int scoreSum = 0;
 
     TextView timeUpView;
     TextView applicantName;
     TextView totalScore;
 
-    @Override
+    public void startChecking(){
+        calculateExamV2();
+    }
+
+/*    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
@@ -49,9 +55,9 @@ public class AnswerChecker extends AppCompatActivity {
 
         setTextAndColor();
 
-    }
+    }*/
 
-    private String calculateExamV2() {
+    protected static String calculateExamV2() {
 
         checkedAnswers.clear();
 
@@ -67,11 +73,11 @@ public class AnswerChecker extends AppCompatActivity {
 
         QuizActivity.questions.clear();
 
-        return String.valueOf(scoreSum) + getString(R.string.max_score);
+        return String.valueOf(scoreSum) + String.valueOf("/10");
 
     }
 
-    private boolean checkAnswers(Question question) {
+    public static boolean checkAnswers(Question question) {
 
         boolean point = false;
 
@@ -91,13 +97,13 @@ public class AnswerChecker extends AppCompatActivity {
         return point;
     }
 
-    private void setTextAndColor() {
+/*    private void setTextAndColor() {
 
         totalScore.setText(calculateExamV2());
 
         if (scoreSum <= 2) {
             totalScore.setTextColor(getResources().getColor(R.color.low_score_color));
-        } else if (scoreSum >= 3 && scoreSum <= 9) {
+        } else if (scoreSum <= 9) {
             totalScore.setTextColor(getResources().getColor(R.color.def_text_color));
         } else if (scoreSum == 10) {
             totalScore.setTextColor(getResources().getColor(R.color.top_score_color));
@@ -109,6 +115,6 @@ public class AnswerChecker extends AppCompatActivity {
     private void tiltTimeUp (){
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.tilt);
         timeUpView.startAnimation(animation1);
-    }
+    }*/
 
 }

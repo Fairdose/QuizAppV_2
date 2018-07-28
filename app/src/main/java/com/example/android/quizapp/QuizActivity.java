@@ -15,6 +15,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -247,9 +248,9 @@ public class QuizActivity extends AppCompatActivity {
 
         //Start the new calculating activity
 
-        Intent quizIntent = new Intent(this, AnswerChecker.class);
-
-        startActivity(quizIntent);
+        AnswerChecker.calculateExamV2();
+        showTheAnswers();
+        Toast.makeText(getApplicationContext(), "Dear " + UserInfo.userName + ". You have scored " + AnswerChecker.calculateExamV2() , Toast.LENGTH_LONG).show();
 
     }
 
