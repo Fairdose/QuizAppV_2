@@ -246,7 +246,7 @@ public class QuizActivity extends AppCompatActivity {
         for (int i = 0; i < answerCompare.size(); i++)
             answerCompare.get(i).setVisibility(View.VISIBLE);
 
-        //Start the new calculating activity
+        //Start the calculations.
 
         AnswerChecker.calculateExamV2();
         showTheAnswers();
